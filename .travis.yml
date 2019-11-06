@@ -5,7 +5,7 @@ install:
   - pip install python-coveralls
 
 script: 
-  - py.test test_rpn.py --cov=rpn.py --cov-report=
+  - py.test coveralls/test_rpn.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
 
 after success:
   - coveralls
