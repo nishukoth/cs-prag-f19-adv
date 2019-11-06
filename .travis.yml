@@ -1,6 +1,6 @@
 language: python
 
 install:
-  - pip install -r requirements.txt
+  - pip install tox-travis
 
 script: make test
