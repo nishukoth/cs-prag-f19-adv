@@ -1,9 +1,13 @@
 language: python
 
 install:
-  - pip install tox-travis
+  - pip install python-coveralls
+  - pip install coverage
+  - pip install nose
 
-script: make test
+script: 
+  - make test
+  - nosetests --with-coverage
 
 after success:
   - coveralls
