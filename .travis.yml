@@ -1,11 +1,11 @@
 language: python
 
 install:
+  - pip install pytest-cov
   - pip install python-coveralls
-  - pip install tox-travis
 
 script: 
-  - tox
+  - py.test test_rpn.py --cov=rpn.py --cov-report=
 
 after success:
   - coveralls

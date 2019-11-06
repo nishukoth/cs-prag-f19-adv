@@ -18,3 +18,6 @@ class TestBasics(unittest.TestCase):
     def test_exponent(self):
         result = rpn.calculate("4 3 ^")
         self.assertEqual(64, result)
+
+if __name__ == '__main__':
+    unittest.main()
