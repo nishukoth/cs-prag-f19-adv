@@ -8,5 +8,5 @@ install:
 script: 
   - pytest --cov=rpn test_rpn.py/
 
-after success:
+after_success:
   - coveralls
