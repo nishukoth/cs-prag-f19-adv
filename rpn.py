@@ -44,11 +44,11 @@ def calculate(myarg):
                 arg1 = stack.pop()
                 result = operator.pow(arg1, arg2)
                 stack.append(result)
-            #if token  == '%':
-                #arg2 = stack.pop()
-                #arg1 = stack.pop()
-                #result = operator.mod(arg1, arg2)
-                #stack.append(result)
+            if token  == '%':
+                arg2 = stack.pop()
+                arg1 = stack.pop()
+                result = operator.mod(arg1, arg2)
+                stack.append(result)
         print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
