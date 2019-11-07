@@ -1,11 +1,12 @@
 language: python
 
 install:
-  - pip install pytest-cov
-  - pip install python-coveralls
+  - pip3 install pytest
+  - pip3 install pytest-cov
+  - pip3 install coveralls
 
 script: 
-  - py.test coveralls/test_rpn.py
+  - pytest --cov=rpn test_rpn.py/
 
 after success:
   - coveralls
