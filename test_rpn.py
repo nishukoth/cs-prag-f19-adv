@@ -18,4 +18,7 @@ def test_divide():
 def test_exponent():
     result = rpn.calculate("4 3 ^")
     assert 64 == result
+def test_modulus():
+    result = rpn.calculate("19 5 %")
+    assert 4 == result
 
